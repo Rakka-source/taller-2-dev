@@ -1,0 +1,20 @@
+version: '3'
+services:
+  
+  django_api:
+    container_name: django_api
+    image: resttransbank:1.0
+    build:
+      context: ./icard-django
+      dockerfile: ../DockerfileDjango
+    ports:
+      - 8000:8000
+
+  react_restaurant:
+    container_name: react_restaurant
+    image: webtransbank:1.0
+    build:
+      context: ./icard-react
+      dockerfile: ../DockerfileReact
+    ports:
+      - 8001:3000
