@@ -8,7 +8,7 @@ services:
       context: ./icard-django
       dockerfile: ../DockerfileDjango
     ports:
-      - 8000:8000
+      - 8005:8000
 
   react_restaurant:
     container_name: react_restaurant
@@ -17,4 +17,4 @@ services:
       context: ./icard-react
       dockerfile: ../DockerfileReact
     ports:
-      - 8001:3000
+      - 8006:3000
